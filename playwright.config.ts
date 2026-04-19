@@ -21,30 +21,31 @@ export default defineConfig({
   timeout:60000,
   testDir: './tests',
   globalSetup:"Helpers/GlobalSetup.ts",
-  testMatch: [
-    // 'tests/example.spec.ts',
-    // 'tests/fileUpload.spec.ts',
-    // 'tests/input.spec.ts',
-    //  'tests/alertPrompt.spec.ts',
-    // 'tests/dropdown.spec.ts',
-    // 'tests/WindowHandles.spec.ts',
-    // 'tests/iFrame.spec.ts',
-    // '/tests/mutipleElements.spec.ts',
-    // '/tests/dragAndDrop.spec.ts',
-    '/tests/myFixtures.test.ts'
-    //  '/tests/myFixturesSecond.test.ts'
-    // '/tests/mutipleElementsResponse.spec.ts',
-    // '/waitAlertPrompt.spec.ts',
-    // '/mouseWheel.spec.ts',
-    // '/cliboardCopy.spec.ts',
-    // '/abortRequest.spec.ts',
-    // '/mutipleEnv.spec.ts'
-    // '/apiTestingGetcall.ts'
-    // '/apiTestingPOSTCall.ts'
-    // '/apiTestingMocking.ts',
-      //  '/typeScriptPratice.ts',
+  testMatch: ['myFixtures.test.ts'],
+  // testMatch: [
+  //   // 'tests/example.spec.ts',
+  //   // 'tests/fileUpload.spec.ts',
+  //   // 'tests/input.spec.ts',
+  //   //  'tests/alertPrompt.spec.ts',
+  //   // 'tests/dropdown.spec.ts',
+  //   // 'tests/WindowHandles.spec.ts',
+  //   // 'tests/iFrame.spec.ts',
+  //   // '/tests/mutipleElements.spec.ts',
+  //   // '/tests/dragAndDrop.spec.ts',
+  //   '/tests/myFixtures.test.ts'
+  //   //  '/tests/myFixturesSecond.test.ts'
+  //   // '/tests/mutipleElementsResponse.spec.ts',
+  //   // '/waitAlertPrompt.spec.ts',
+  //   // '/mouseWheel.spec.ts',
+  //   // '/cliboardCopy.spec.ts',
+  //   // '/abortRequest.spec.ts',
+  //   // '/mutipleEnv.spec.ts'
+  //   // '/apiTestingGetcall.ts'
+  //   // '/apiTestingPOSTCall.ts'
+  //   // '/apiTestingMocking.ts',
+  //     //  '/typeScriptPratice.ts',
 
-  ],
+  // ],
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
