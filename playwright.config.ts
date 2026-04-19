@@ -20,7 +20,7 @@ export default defineConfig({
 
   timeout:60000,
   testDir: './tests',
-  globalSetup:"Helpers/GlobalSetup.ts",
+  // globalSetup:"Helpers/GlobalSetup.ts",
   testMatch: ['myFixtures.test.ts'],
   // testMatch: [
   //   // 'tests/example.spec.ts',
@@ -131,5 +131,5 @@ export default defineConfig({
   // },
 
 
-  globalTeardown:""
+  // globalTeardown:""
 });

@@ -2,38 +2,34 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Build') {
             steps {
-                dir('C:\\Users\\ravit\\OneDrive\\Documents\\Playwright') {
-                    bat 'npm ci'
-                }
+                bat 'npm ci'
             }
         }
 
         stage('Install Browsers') {
             steps {
-                dir('C:\\Users\\ravit\\OneDrive\\Documents\\Playwright') {
-                    bat 'npx playwright install --with-deps'
-                }
+                bat 'npx playwright install'
             }
         }
 
         stage('Test') {
             steps {
-                 dir('C:\\Users\\ravit\\OneDrive\\Documents\\Playwright') {
-                    bat '''
-                    cd
-                    dir
-                    dir tests
-                    npx playwright test --list
-                    '''
-                }
+                bat 'npx playwright test --list'
+                bat 'npx playwright test'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying the Project.........."
+                echo 'Deploying the Project..........'
             }
         }
     }
