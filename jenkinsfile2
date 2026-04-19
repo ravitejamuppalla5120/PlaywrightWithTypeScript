@@ -20,8 +20,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                dir('C:\\Users\\ravit\\OneDrive\\Documents\\Playwright') {
-                    bat 'npx playwright test'
+                 dir('C:\\Users\\ravit\\OneDrive\\Documents\\Playwright') {
+                    bat '''
+                    cd
+                    dir
+                    dir tests
+                    npx playwright test --list
+                    '''
                 }
             }
         }
