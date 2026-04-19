@@ -1,33 +1,35 @@
-pipeline{
-agent any
-stages 
-{
-stage('Build') 
-{
-steps{
-cd C:\Users\ravit\OneDrive\Documents\Playwright
-npm ci
-}
-}
-stage('Deploy') 
-{
-steps{
-cd C:\Users\ravit\OneDrive\Documents\Playwright
-npx playwright install --with-deps
-}
-}
-stage('Test') 
-{
-steps{
-cd C:\Users\ravit\OneDrive\Documents\Playwright
-npx playwright test
-}
-}
-stage('Deploy') 
-{
-steps{
-echo "Deploying the Project.........."
-}
-}
-}
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                dir('C:\\Users\\ravit\\OneDrive\\Documents\\Playwright') {
+                    bat 'npm ci'
+                }
+            }
+        }
+
+        stage('Install Browsers') {
+            steps {
+                dir('C:\\Users\\ravit\\OneDrive\\Documents\\Playwright') {
+                    bat 'npx playwright install --with-deps'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                dir('C:\\Users\\ravit\\OneDrive\\Documents\\Playwright') {
+                    bat 'npx playwright test'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploying the Project.........."
+            }
+        }
+    }
 }
