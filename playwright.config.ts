@@ -11,6 +11,11 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
+// Set Selenium Grid URL here
+process.env.SELENIUM_REMOTE_URL = 'http://localhost:4444';
+
+
 export default defineConfig({
 
   timeout:60000,
@@ -26,10 +31,10 @@ export default defineConfig({
     // 'tests/iFrame.spec.ts',
     // '/tests/mutipleElements.spec.ts',
     // '/tests/dragAndDrop.spec.ts',
-    // '/tests/myFixtures.test.ts'
+    '/tests/myFixtures.test.ts'
     //  '/tests/myFixturesSecond.test.ts'
     // '/tests/mutipleElementsResponse.spec.ts',
-    '/waitAlertPrompt.spec.ts',
+    // '/waitAlertPrompt.spec.ts',
     // '/mouseWheel.spec.ts',
     // '/cliboardCopy.spec.ts',
     // '/abortRequest.spec.ts',
